@@ -16,7 +16,7 @@ app.use(cors({ origin: true, credentials: true }));
 
 //routes
 
-//port
+//port / use env.PORT or default 8080
 const port = process.env.PORT || 8080;
 
 //listener
