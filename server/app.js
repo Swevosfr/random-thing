@@ -9,6 +9,11 @@ require("dotenv").config();
 const app = express();
 
 // mongoose db
+mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@${process.env.CLUSTER}.mongodb.net/?retryWrites=true&w=majority`)
+  .then(() => {
+    console.log("Successfully connect to database")
+  })
+.catch(err=>console.log(err))
 
 //middleware
 app.use(morgan("dev"));
